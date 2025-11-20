@@ -1,231 +1,349 @@
 package TresEnRaya;
 
-import java.util.HashMap;
-import java.util.InputMismatchException;
-import java.util.Map;
+
 import java.util.Scanner;
 
 
 public class TresEnRaya {
-    private static int victoriasJugador1 = 0;
-    private static int victoriasJugador2 = 0;
-    private static int empates = 0;
 
 
-    private static String nombreJuego = "Bienvenido al juego tresEnRaya";
+    public static Scanner in = new Scanner(System.in);
 
-    private static char jugador = 'x';
-    public static int jugadorNumero() {
-        return (jugador == 'x') ? 1 : 2;
-    }
-
-    
-    public static void cambiar_jugador() {
-    	if (jugador == 'x'){
-    		jugador = 'o';
-    	} else {
-    		jugador = 'x';
-    	}
-    }
-    
-
-    static char[] tablero = {
-        '1','2','3',
-        '4','5','6',
-        '7','8','9'
-    };
-
-    private static Map<Integer,Integer> posiciones = new HashMap<>();
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        // Bucle principal (Menú y Juego)
-        while (true) {
-            // --- LÓGICA DEL MENÚ ---
-            System.out.println("-----------------------eliga una opcion--------------------------");
-            System.out.println("-----------------------1.iniciar partida---------------------------");
-            System.out.println("------------------------2.estadisticas-----------------------------");
-            System.out.println("----------------------------3.salir-----------------------------------");
-            System.out.print("> ");
-            
-            int opcion = 0; 
-            
-            try {
-                opcion = scanner.nextInt();
-                // Consumir el salto de línea pendiente aquí si la lectura es exitosa
-                scanner.nextLine(); 
-            } catch (InputMismatchException e) {
-                scanner.nextLine(); // Limpiar el buffer si no es un número
-                opcion = 0;         // Asignar 0 para que caiga en el 'else'
-            }
-            
-            
-            if (opcion == 3) {
-                System.out.println("Saliendo del juego...");
-                return; // Termina el método main y el programa
-            }
-            else if (opcion == 2) {
-                mostrarEstadisticas();
-                System.out.println("-----------------------------------------------------------------");
-                continue;
-            }
-
-            else if (opcion != 1) { // Esto cubre 'opcion == 0' (letras) y otros números inválidos
-                System.out.println("Opción no válida. Tiene que elegir entre 1 y 3.");
-                System.out.println("-----------------------------------------------------------------");
-                continue; // Vuelve al inicio del bucle para mostrar el menú de nuevo
-            }
-            
-            // Si llegamos a este punto, 'opcion' DEBE ser 1
-            
-            // --- LÓGICA DE INICIO DE PARTIDA (Opción 1) ---
-            
-            System.out.println(nombreJuego);
-            cargarPosiciones(); 
-            mostrarTablero();
-            
-            // Bucle para los turnos del juego
-            while(true) {
-                System.out.print("Es tu turno Jugador " + jugadorNumero() + ", ingresa la posición (1-9): ");
-                int posicionElegida;
-                
-                // **IMPORTANTE:** Manejo de error para la entrada de posición
-                try {
-                    posicionElegida = scanner.nextInt();
-                    scanner.nextLine(); // Consumir salto de línea
-                } catch (InputMismatchException e) {
-                    scanner.nextLine(); // Limpiar el buffer si es una letra
-                    System.out.println("Error: Por favor, ingresa un número de posición válido (1-9).");
-                    continue; // Volver al inicio del bucle de turnos
-                }
-
-                System.out.println("Has elegido la posición " + posicionElegida);
-
-                // **CORRECCIÓN:** Revisar si la posición existe en el mapa (rango 1-9)
-                if (!posiciones.containsKey(posicionElegida)) {
-                    System.out.println("La posición elegida no se encuentra disponible. Elige un número en el rango de 1-9.");
-                    continue; 
-                }
-
-                int index = posiciones.get(posicionElegida); 
-
-                if (tablero[index] == 'x' || tablero[index] == 'o') {
-                    System.out.println("La posición elegida ya ha sido tomada. Intenta otra.");
-                    continue; 
-                }
-                
-                // Aplicar el movimiento
-                tablero[index] = jugador;
-
-                mostrarTablero();
-                
-                if (hayGanador()) {
-    System.out.println("¡Felicidades jugador " + jugadorNumero() + "! ¡Has ganado!");
-
-    // SUMAR ESTADÍSTICA
-    if (jugador == 'x') {
-        victoriasJugador1++;
-    } else {
-        victoriasJugador2++;
-    }
-
-    break;
-}
- if (tableroLleno()) {
-    System.out.println("Ha sido un empate");
-
-    // SUMAR EMPATE
-    empates++;
-
-    break;
-}
-
-                
-                cambiar_jugador();
-            } // Fin del bucle de turnos del juego
-            
-            // Después de que la partida termina (break), el código continúa aquí.
-            // Se añade una línea para separar visualmente el final del juego del menú.
-            System.out.println("----------------------- PARTIDA FINALIZADA ----------------------");
-        } // Fin del bucle principal (vuelve a mostrar el menú)
-    }
-    private static void cargarPosiciones() {
-        posiciones.put(1, 0);
-        posiciones.put(2, 1);
-        posiciones.put(3, 2);
-        posiciones.put(4, 3);
-        posiciones.put(5, 4);
-        posiciones.put(6, 5);
-        posiciones.put(7, 6);
-        posiciones.put(8, 7);
-        posiciones.put(9, 8);
-    }
-    private static boolean primeraVez = true;
-
-    private static void mostrarTablero() {
-        System.out.println("-------------");
-
-        for (int i = 0; i < tablero.length; i++) {
-
-            if (i % 3 == 0) System.out.print("| ");
-            
-            char mostrar = tablero[i];
-            if (!primeraVez) {
-            	if (mostrar != 'x' && mostrar != 'o') {
-                mostrar = ' ';
-            	}
-            }
+    public static char[] tablero = new char[9]; // ' ' vacía, 'X' jugador 1, 'O' jugador 2
 
 
-            System.out.print(mostrar + " | ");
-            
-           
 
-            if (i % 3 == 2) {
-                System.out.println();
-                System.out.println("-------------");
-            
-            }
-        }
-        primeraVez = false;
-    }
-    private static boolean tableroLleno() {
-    // Verificar si existe alguna casilla NO ocupada
-    for (char c : tablero) {
-        if (c != 'x' && c != 'o') {
-            return false; // aún hay casillas disponibles
-        }
+    // MÉTODOS DEL JUEGO
+
+
+    // Inicializa el tablero con casillas vacías
+
+    public static void iniciar() {
+
+        for (int i = 0; i < 9; i++) tablero[i] = ' ';
 
     }
-    return true;
-}
-    private static boolean hayGanador() {
 
-        // Líneas horizontales
-        if (tablero[0] == tablero[1] && tablero[1] == tablero[2]) return true;
-        if (tablero[3] == tablero[4] && tablero[4] == tablero[5]) return true;
-        if (tablero[6] == tablero[7] && tablero[7] == tablero[8]) return true;
 
-        // Líneas verticales
-        if (tablero[0] == tablero[3] && tablero[3] == tablero[6]) return true;
-        if (tablero[1] == tablero[4] && tablero[4] == tablero[7]) return true;
-        if (tablero[2] == tablero[5] && tablero[5] == tablero[8]) return true;
+    // Comprueba si el movimiento del jugador es válido
 
-        // Líneas diagonales
-        if (tablero[0] == tablero[4] && tablero[4] == tablero[8]) return true;
-        if (tablero[2] == tablero[4] && tablero[4] == tablero[6]) return true;
+    public static boolean movimientoValido(int pos) {
+
+        return pos >= 1 && pos <= 9 && tablero[pos - 1] == ' ';
+
+    }
+
+
+    // Coloca la ficha del jugador 1 en la posición indicada
+
+    public static void mueveJugador1(int pos) {
+
+        tablero[pos - 1] = 'X';
+
+    }
+
+
+    // Coloca la ficha del jugador 2 en la posición indicada
+
+    public static void mueveJugador2(int pos) {
+
+        tablero[pos - 1] = 'O';
+
+    }
+
+
+    // Comprueba si quedan casillas vacías
+
+    public static boolean quedanCasillas() {
+
+        for (char c : tablero) if (c == ' ') return true;
 
         return false;
+
     }
 
-    private static void mostrarEstadisticas() {
-    System.out.println("========== ESTADÍSTICAS ==========");
-    System.out.println("Victorias del Jugador 1 (X): " + victoriasJugador1);
-    System.out.println("Victorias del Jugador 2 (O): " + victoriasJugador2);
-    System.out.println("Empates: " + empates);
-    System.out.println("==================================");
+
+    // Dibuja el tablero en consola
+
+    public static void dibujaTablero() {
+
+        boolean primeraVez = true;
+
+        for (char c : tablero) {
+
+            if (c != ' ') {
+
+                primeraVez = false;
+
+                break;
+
+            }
+
+        }
+
+
+        System.out.println("-------------");
+
+        for (int i = 0; i < 9; i++) {
+
+            if (i % 3 == 0) System.out.print("| ");
+
+
+            char c = tablero[i];
+
+            // Mostrar números solo al principio
+
+            if (c == ' ') {
+
+                System.out.print((primeraVez ? (i + 1) : " ") + " | ");
+
+            } else {
+
+                System.out.print(c + " | ");
+
+            }
+
+
+            if (i % 3 == 2) {
+
+                System.out.println();
+
+                System.out.println("-------------");
+
+            }
+
+        }
+
+    }
+
+
+    // Comprueba si el jugador 1 gana
+
+    public static boolean ganaJugador1() {
+
+        return gana('X');
+
+    }
+
+
+    // Comprueba si el jugador 2 gana
+
+    public static boolean ganaJugador2() {
+
+        return gana('O');
+
+    }
+
+
+    // Comprueba si un jugador gana
+
+    public static boolean gana(char f) {
+
+        return
+
+                (tablero[0] == f && tablero[1] == f && tablero[2] == f) ||
+
+                (tablero[3] == f && tablero[4] == f && tablero[5] == f) ||
+
+                (tablero[6] == f && tablero[7] == f && tablero[8] == f) ||
+
+
+                (tablero[0] == f && tablero[3] == f && tablero[6] == f) ||
+
+                (tablero[1] == f && tablero[4] == f && tablero[7] == f) ||
+
+                (tablero[2] == f && tablero[5] == f && tablero[8] == f) ||
+
+
+                (tablero[0] == f && tablero[4] == f && tablero[8] == f) ||
+
+                (tablero[2] == f && tablero[4] == f && tablero[6] == f);
+
+    }
+
+
+    // Muestra las estadísticas del juego
+
+    public static void mostrarEstadisticas(int v1, int v2, int emp) {
+
+        System.out.println("========== ESTADÍSTICAS ==========");
+
+        System.out.println("Victorias Jugador 1 (X): " + v1);
+
+        System.out.println("Victorias Jugador 2 (O): " + v2);
+
+        System.out.println("Empates: " + emp);
+
+        System.out.println("==================================");
+
+    }
+
+
+    // --------------------------------
+
+    // MAIN CON MENÚ
+
+    // --------------------------------
+
+
+    public static void main(String[] args) {
+
+
+        int victoriasJugador1 = 0;
+
+        int victoriasJugador2 = 0;
+
+        int empates = 0;
+
+
+        while (true) {
+
+            System.out.println("----------------------- Elige una opción --------------------------");
+
+            System.out.println("1. Iniciar partida");
+
+            System.out.println("2. Estadísticas");
+
+            System.out.println("3. Salir");
+
+            System.out.print("> ");
+
+
+            // Validar que la entrada sea un número
+
+            if (!in.hasNextInt()) {
+
+                System.out.println("Entrada no válida. Debes introducir un número.");
+
+                in.nextLine(); // Limpiar buffer
+
+                continue;
+
+            }
+            int opcion = in.nextInt();
+
+            in.nextLine();
+
+
+            if (opcion == 3) {
+
+                System.out.println("Saliendo del juego...");
+
+                break;
+
+            } else if (opcion == 2) {
+
+                mostrarEstadisticas(victoriasJugador1, victoriasJugador2, empates);
+
+                continue;
+
+            } else if (opcion != 1) {
+
+                System.out.println("Opción no válida. Elige 1, 2 o 3.");
+
+                continue;
+
+            }
+
+
+            // Iniciar partida
+
+            iniciar();
+
+            int turno = 1;
+
+
+            while (true) {
+
+                dibujaTablero();
+
+                System.out.print("Turno Jugador " + turno + ". Posición (1-9): ");
+
+
+                // Validar entrada del jugador
+
+                if (!in.hasNextInt()) {
+
+                    System.out.println("Introduce un número válido.");
+
+                    in.nextLine();
+
+                    continue;
+
+                }
+
+                int pos = in.nextInt();
+
+                in.nextLine();
+
+
+                if (!movimientoValido(pos)) {
+
+                    System.out.println("Movimiento no válido.");
+
+                    continue;
+
+                }
+
+
+                if (turno == 1) {
+
+                    mueveJugador1(pos);
+
+                    if (ganaJugador1()) {
+
+                        dibujaTablero();
+
+                        System.out.println("¡Jugador 1 gana!");
+
+                        victoriasJugador1++;
+
+                        break;
+
+                    }
+
+                    turno = 2;
+
+                } else {
+
+                    mueveJugador2(pos);
+
+                    if (ganaJugador2()) {
+
+                        dibujaTablero();
+
+                        System.out.println("¡Jugador 2 gana!");
+
+                        victoriasJugador2++;
+
+                        break;
+
+                    }
+
+                    turno = 1;
+
+                }
+
+
+                if (!quedanCasillas()) {
+
+                    dibujaTablero();
+
+                    System.out.println("Empate.");
+
+                    empates++;
+
+                    break;
+
+                }
+
+            }
+
+
+            System.out.println("------------------- PARTIDA FINALIZADA -------------------");
+
+        }
+
+    }
+
 }
-
-
-    }
