@@ -9,6 +9,7 @@ public class agregarUnPodructoAunaArray {
         static int pos = 0;
         static Scanner entrada = new Scanner(System.in);
     public static void main(String[] args) {
+        int opcion = 0;
         do {
             System.out.println("------------------------ Elige una opción --------------------------");
     System.out.println("----------------------- 1. dar de alta a un producto ---------------------------");
@@ -16,7 +17,7 @@ public class agregarUnPodructoAunaArray {
     System.out.println("----------------------- 3. modificar el estock y el preio de un producto ------------------------------------");
     System.out.println("----------------------- 4. salir ------------------------------------");
     System.out.print("> ");
-    int opcion = entrada.nextInt();
+    opcion=entrada.nextInt();
 
    // Verifica si hay un entero
         switch (opcion) {
