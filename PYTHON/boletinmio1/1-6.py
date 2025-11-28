@@ -21,7 +21,7 @@ print("\n")
 
 
 # ======================================================================
-# EJERCICIO 2  
+# EJERCICIO 2 
 # Pide una frase y muestra cuántas vocales tiene en total  
 # y cuántas de cada tipo (a,e,i,o,u).
 # ======================================================================

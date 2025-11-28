@@ -1,1 +1,4 @@
+1 que introduzca un numero de 5 digitos y ver si es capicua o no, no se puede usar array
+
+2 haz un tabla de multiplica del 0 ala 10 ambos incluidos el numero a multiplicar sera introducido por el usuario
 

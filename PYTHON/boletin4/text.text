@@ -1,0 +1,38 @@
+Ejercicios genéricos de programación 4
+Este boletín de ejercicios está orientado a practicar con todo lo visto en los boletines
+anteriores.
+1. Escribir un programa que pida un número por teclado y calcule su factorial. Como
+sabes, la factorial de un número se calcula multiplicando ese número por los sucesivos
+factores que obtenemos restando uno hasta llegar a la unidad. Por ejemplo, el factorial
+de 6 (que se representa así 6!) sería este:
+6! = 6*5*4*3*2*1 = 720
+2. En matemáticas, la sucesión de Fibonacci se trata de una serie infinita de números
+naturales. Los dos primeros son siempre el 0 y el 1. Los siguientes se obtienen
+sumando los dos anteriores. El tercero sería 1 (la suma de 0 + 1), el cuarto sería 2 (la
+suma de 1 + 1), el quinto 3 (la suma de 1 + 2) y así sucesivamente. La lista con los 10
+primeros números sería esta: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34].
+Queremos hacer un programa que reciba un número por teclado y nos calcule tantos
+números de la sucesión de fibonacci como indique ese número. Por ejemplo, si
+metemos un 8 la salida de tu programa debería de ser así:
+0,1,1,2,3,5,8,13
+3. Queremos ahora hacer un programa que reciba un número por teclado y nos muestre en
+orden todos los números de la sucesión de fibonacci que sean menores o iguales al que
+has enviado como argumento. Por ejemplo, si metemos el número 4 nos debería de
+devolver esto:
+0,1,1,2,3
+4. Escribir un programa que cuente el número de cifras que tiene un número (por ejemplo,
+el 8 tiene una cifra, el 221 tres y el 456789 seis).
+5. Escribir un programa que nos diga si un número es capicúa.
+6. Escribir un programa que muestre por pantalla los 50 primeros números primos, sus
+raíces cuadradas, sus cuadrados y sus cubos
+7. Decimos que dos números primos son gemelos cuando están separados por un único
+número (el 11 y el 13, el 17 y el 19, el 41 y el 43, etc.). Escribir un programa que calcule
+la primera pareja de primos gemelos por encima del 50.
+8. Escribe un programa que sume por un lado las cifras pares y por otro las impares de un
+número y nos muestre ambos resultados. Por ejemplo, si el número en cuestión es el
+128 nos debería e decir que la suma de las cifras pares es 9 y la de las impares 2
+9. Escribir un programa que nos pida por teclado primero una cadena y luego un carácter.
+A continuación debe de imprimirnos cuantas veces aparece dicho carácter y en las
+posiciones de la cadena donde lo hace. Por ejemplo, si nuestra cadena es Hola Mundo
+y el carácter la o nos debería de decir algo así:
+La o aparece en 2 ocasiones
