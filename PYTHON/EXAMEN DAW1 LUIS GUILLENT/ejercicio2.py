@@ -1,0 +1,3 @@
+"""que haga un sorteo a un array de 10 personas  y les reparta una cierta cantidad de premio introducida por teclado
+y que muestre por pantalla el apellido y nombre de la persona ganadora y quienes se han quedado sin  premio, las aplicacion debe evaluar que los premios sean menor 
+a la cantidad de persona a las que se tienen que regalar, tambien evaluar si es un numero lo que se ingresa por teclado"""

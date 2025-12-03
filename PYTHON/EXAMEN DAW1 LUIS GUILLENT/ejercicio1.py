@@ -21,6 +21,8 @@ max = numeroTiradas * 6
 media = max / 2
 
 
+"""hacerlo con append"""
+
 
 print(f"en {numeroTiradas} tiradas ha salido un uno {contUno} veces")
 print(f"en {numeroTiradas} tiradas ha salido un  seis {contSeis} veces")

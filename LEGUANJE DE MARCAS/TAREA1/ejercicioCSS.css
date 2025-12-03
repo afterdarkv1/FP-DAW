@@ -1,0 +1,58 @@
+/* body */
+body {
+    background-color: #f0f4f8;
+    font-family: sans-serif;
+}
+
+/* TÍTULO */
+body > div:first-of-type > h1 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 5px 5px 5px grey;
+}
+
+/* HR */
+body > div:first-of-type > hr:first-of-type {
+    width: 80%;
+}
+
+/* Autor */
+body > div:first-of-type > div {
+    text-align: right;
+    margin-right: 20px;
+}
+
+/* Capítulo */
+body > div:first-of-type > h2:first-of-type {
+    text-align: right;
+    margin-right: 20px;
+    color: rgb(0, 72, 180);
+}
+
+/* HR en el capitulo */
+body > div:first-of-type > hr:nth-of-type(2) {
+    width: 98%;
+}
+
+/* Subtítulo */
+body > div:first-of-type > h2:last-of-type {
+    color: rgb(0, 72, 180);
+}
+
+/* PRIMERA LETRA DE TODOS LOS PÁRRAFOS */
+p::first-letter {
+    font-size: 30px;
+    color: rgb(0, 72, 180);
+}
+
+/* SEGUNDO PÁRRAFO */
+body > div:last-of-type > p:nth-child(2) {
+    border-left: 5px solid rgb(0, 72, 180);
+    padding-left: 8px;
+}
+
+/* TERCER PÁRRAFO*/
+body > div:last-of-type > p:nth-child(3) {
+    font-weight: bold;
+}
