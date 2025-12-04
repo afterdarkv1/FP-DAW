@@ -1,0 +1,10 @@
+.header {
+    border-radius: 20px;
+    background-color: #eaebec;
+    box-shadow: 20px 20px 30px grey;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
