@@ -1,4 +1,9 @@
-
+body {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    padding: 2em;
+}
 
 .flex-container {
     display: flex;
