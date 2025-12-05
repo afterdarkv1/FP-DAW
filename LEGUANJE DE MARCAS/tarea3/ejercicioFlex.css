@@ -1,10 +1,22 @@
-.header {
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap ;
+    gap: 1.5em;
+    justify-content: center;
+
+}
+
+header {
     border-radius: 20px;
     background-color: #eaebec;
     box-shadow: 20px 20px 30px grey;
+
 }
 
-div {
-    display: flex;
-    flex-direction: column;
+section {
+    border-radius: 20px;
+    background-color: #eaebec;
+    box-shadow: 20px 20px 30px grey;
 }
