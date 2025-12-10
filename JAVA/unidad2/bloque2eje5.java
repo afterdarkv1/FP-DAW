@@ -10,6 +10,9 @@ public class bloque2eje5 {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("introduce un caracter");
 		char c = scanner.nextLine().charAt(0);
+		System.out.println("introduce un caracter");
+		int n = scanner.nextInt();
+		
 		
 	}
 

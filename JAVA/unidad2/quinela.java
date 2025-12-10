@@ -1,6 +1,9 @@
+package UNIDAD2;
+
+
 import java.util.Random;
 
-public class QuinielaTresColumnas {
+public class quinela {
     public static void main(String[] args) {
         Random rand = new Random();
         String[] signos = {"1", "X", "2"};
@@ -11,9 +14,6 @@ public class QuinielaTresColumnas {
             System.out.println(signos[rand.nextInt(3)]);
         }
 
-        // Pleno al 15
-        System.out.print(signos[rand.nextInt(3)] + " ");
-        System.out.print(signos[rand.nextInt(3)] + " ");
-        System.out.println(signos[rand.nextInt(3)]);
     }
 }
+

@@ -7,6 +7,9 @@ public class notas {
 		.equalsIgnoreCase()
 		.indexOf()
 		.lastIndexOf
+		
+		random gemAle = new Ramdom();
 	}
+	ejercicio numerosAleatorios numero 2
 
 }
