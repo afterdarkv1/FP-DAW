@@ -1,0 +1,139 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.09em;
+}
+
+/* BODY */
+body {
+  background-color: rgb(38, 127, 230);
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.logo {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 20%;
+  height: 50%;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.content {
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 90vh;
+}
+
+/* TÍTULO */
+.titulo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+/* SELECT IDIOMA */
+.content_languaje {
+  margin-left: auto;
+}
+
+.language-select {
+  padding: 6px;
+}
+
+/* FORMULARIO */
+.form {
+  width: 60%;
+  margin-top: 30px;
+  padding-left: 10vw;
+
+  /* 🔹 TEXTO A LA IZQUIERDA */
+  text-align: left;
+}
+
+/* ESPACIADO ENTRE CAMPOS */
+.form p {
+  margin-top: 20px;
+}
+
+/* NOMBRE Y APELLIDO */
+.form_names {
+  display: flex;
+  gap: 20px;
+}
+
+.form_names input {
+  width: 150px;
+  height: 28px;
+  font-size: 14px;
+  padding: 4px 6px;
+}
+
+/* EMAIL */
+.form_email input {
+  width: 23vw;
+  padding: 5px;
+}
+
+/* SEXO */
+.form_sexo input {
+  margin-right: 5px;
+}
+
+/* FECHA */
+.form_fecha select {
+  margin-left: 10px;
+}
+
+/* PASSWORD */
+#password {
+  width: 300px;
+  padding: 8px;
+}
+
+/* TEXTO AZUL */
+.blue {
+  color: blue;
+}
+
+/* CHECKBOX */
+.form_checkbox {
+  text-align: left;
+}
+
+/* BOTÓN */
+.form_submit {
+  margin-top: 30px;
+  text-align: right;
+  align-items: right;
+}
+
+.form_submit input {
+  padding: 10px 20px;
+  background-color: rgb(38, 127, 230);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.form_submit input:hover {
+  background-color: rgb(30, 100, 200);
+}
