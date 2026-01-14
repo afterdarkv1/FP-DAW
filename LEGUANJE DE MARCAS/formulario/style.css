@@ -1,4 +1,4 @@
-/* ====== RESET BÁSICO ====== */
+
 * {
     box-sizing: border-box;
 }
@@ -9,7 +9,6 @@ body {
     background-color: #0f8bce;
 }
 
-/* ====== HEADER ====== */
 header {
     padding: 10px 0;
     text-align: center;
@@ -20,7 +19,6 @@ header {
     width: auto;
 }
 
-/* ====== CONTENEDOR ====== */
 .container {
     position: relative;
     width: 600px;
@@ -31,10 +29,10 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* ====== TÍTULOS ====== */
+
 .titles {
     display: flex;
-    align-items: center; /* centra verticalmente */
+    align-items: center; 
     gap: 10px;
     margin-bottom: 20px;
 }
@@ -51,26 +49,33 @@ h2 {
     margin: 0;
 }
 
-/* ====== IDIOMA ====== */
 .idioma {
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    color: #1da1d6;
+}
+.form-group.idioma select {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none; 
+    background: transparent; 
+    font-size: 14px;
+    color: #1da1d6; 
+    padding: 4px 20px 4px 4px; 
+    cursor: pointer;
 }
 
-.idioma label {
-    font-size: 13px;
-    margin-right: 5px;
-}
+
+
 
 .idioma select {
-    width: 120px;
+    width: 90px;
     padding: 6px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
 }
 
-/* ====== FORMULARIO ====== */
 .form-group {
     margin-bottom: 15px;
 }
@@ -90,7 +95,7 @@ select {
     font-size: 14px;
 }
 
-/* Nombre y Apellidos */
+
 .inline input {
     width: 170px;
     margin-right: 10px;
@@ -100,19 +105,18 @@ select {
     margin-right: 0;
 }
 
-/* Radios */
+
 .radio-group input {
     width: auto;
     margin-left: 10px;
 }
 
-/* Fecha */
+
 .date select {
     width: 90px;
     margin-right: 5px;
 }
 
-/* Texto pequeño */
 .small-text {
     font-size: 11px;
     color: #888;
@@ -120,7 +124,7 @@ select {
     margin-bottom: 15px;
 }
 
-/* Teléfono */
+
 .phone select {
     width: 100px;
     margin-right: 10px;
@@ -152,7 +156,7 @@ select {
     background-color: #168bbd;
 }
 
-/* Checkbox */
+
 .form-group.checkbox {
     display: flex;
     align-items: center;
@@ -160,15 +164,31 @@ select {
 }
 
 .form-group.checkbox input[type="checkbox"] {
-    width: auto; /* elimina el ancho de 350px de los inputs generales */
-    margin-right: 10px; /* espacio entre checkbox y el texto */
+    width: auto; 
+    margin-right: 10px; 
 }
 
 .form-group.checkbox a {
-    color: #1da1d6; /* opcional: color de links igual al botón */
+    color: #1da1d6;
     text-decoration: none;
 }
 
 .form-group.checkbox a:hover {
     text-decoration: underline;
+}
+
+.consejo {
+    font-size: 12px;
+    margin-left: 140px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+
+}
+.consejo a {
+    color: #1da1d6; 
+    text-decoration: none; 
+}
+
+.consejo a:hover {
+    text-decoration: underline; 
 }
