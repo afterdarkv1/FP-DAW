@@ -4,71 +4,115 @@
     <meta charset="UTF-8">
     <title>Únete a Tuenti</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
-<header>
-          <div class="logo">
-            <img src="logo.png" alt="Tuenti Logo">
-          </div>
-</header>
 <body>
 
-    <div class="container">
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Tuenti Logo">
+    </div>
+</header>
 
+<div class="container">
+
+    <!-- Idioma arriba a la derecha -->
+    <div class="form-group idioma">
+        <label></label>
+        <select>
+            <option>Español</option>
+            <option>Inglés</option>
+        </select>
+    </div>
+
+    <!-- Títulos -->
+    <div class="titles">
         <h2>Únete a Tuenti</h2>
         <div class="subtitle">Todos los campos son obligatorios</div>
+    </div>
+
+    <!-- Formulario -->
+    <form>
 
         <div class="form-group inline">
             <label>Nombre</label>
-            <input type="text" placeholder="Nombre">
-            <input type="text" placeholder="Apellidos">
+            <input type="text" placeholder="Nombre" required>
+            <input type="text" placeholder="Apellidos" required>
         </div>
 
         <div class="form-group">
-            <label>Email:</label>
-            <input type="email">
+            <label>Email</label>
+            <input type="email" required>
         </div>
 
         <div class="form-group radio-group">
             <label>Sexo</label>
-            <input type="radio"> Hombre
-            <input type="radio"> Mujer
+            <input type="radio" name="sexo" required> Hombre
+            <input type="radio" name="sexo"> Mujer
         </div>
 
         <div class="form-group date">
             <label>Fecha de nacimiento</label>
             <select><option>Día</option></select>
-            <select><option>Mes</option></select>
-            <select><option>Año</option></select>
+            <select>
+                <option>Mes</option>
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Mayo</option>
+                <option>Junio</option>
+                <option>Julio</option>
+                <option>Agosto</option>
+                <option>Septiembre</option>
+                <option>Octubre</option>
+                <option>Noviembre</option>
+                <option>Diciembre</option>
+            </select>
+            <select>
+                <option>Año</option>
+                <option>2026</option>
+                <option>2025</option>
+                <option>2024</option>
+                <option>2023</option>
+            </select>
         </div>
 
         <div class="small-text">La edad mínima permitida es 14.</div>
 
         <div class="form-group">
             <label>Contraseña</label>
-            <input type="password">
-        </div>
-
-        <div class="small-text">
-            Consejos para elegir una contraseña
+            <input type="password" required>
         </div>
 
         <div class="form-group phone">
             <label>Número de móvil</label>
-            <input type="text" value="+34">
-            <input type="text">
+            <select>
+                <option>+34E</option>
+            </select>
+            <input type="text" required>
         </div>
 
-        <div class="checkbox">
-            <input type="checkbox">
-            Aceptas las <a href="#">Condiciones de uso</a> y la
-            <a href="#">Política de privacidad</a> de Tuenti
-        </div>
+        <!-- Checkbox al nivel de los demás labels -->
+  <div class="form-group checkbox">
+
+    <div>
+           <input type="checkbox" id="acepto" required>
+        Aceptas las
+        <a href="http://www.ticarte.com">Condiciones de uso</a>,
+        la <a href="http://www.ticarte.com">Política de privacidad</a> y el
+        <a href="http://www.ticarte.com">Decálogo de condiciones</a>.
+</div>
+</div>
+
+
 
         <div class="button">
-            <button>¡Disfruta de Tuenti!</button>
+            <button type="submit">¡Disfruta de Tuenti!</button>
         </div>
-    </div>
+
+    </form>
+
+</div>
 
 </body>
 </html>
