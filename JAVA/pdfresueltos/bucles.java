@@ -1,13 +1,16 @@
 package pdfresueltos;
 
 import java.util.Scanner;
+   
 
 public class bucles {
-	static Scanner scanner = new Scanner(System.in);
+	  static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
+
+
+        // Pedir rango al usuario
         System.out.print("Ingrese el límite inferior del rango: ");
         int inicio = scanner.nextInt();
 
@@ -16,42 +19,44 @@ public class bucles {
 
         if (inicio < 1 || fin < inicio) {
             System.out.println("Rango inválido.");
-            return;
-        }
+        } else {
 
-        int[] sumaDivisores = new int[fin + 1];
+            // Arreglo para almacenar la suma de divisores propios de cada número
+            int[] sumaDivisores = new int[fin + 1];
 
-        // Calcular la suma de divisores propios para cada número
-        for (int i = inicio; i <= fin; i++) {
-            sumaDivisores[i] = sumaDivisoresPropios(i);
-        }
-
-        System.out.println("\nPares de números amigos en el rango [" + inicio + ", " + fin + "]:");
-
-        boolean encontrado = false;
-
-        for (int a = inicio; a <= fin; a++) {
-            int b = sumaDivisores[a];
-
-            // Evitar duplicados y verificar números amigos
-            if (b > a && b <= fin && sumaDivisores[b] == a) {
-                System.out.println("(" + a + ", " + b + ")");
-                encontrado = true;
+            // Calcular suma de divisores propios de cada número
+            for (int i = inicio; i <= fin; i++) {
+                sumaDivisores[i] = sumaDivisoresPropios(i);
             }
-        }
 
-        if (!encontrado) {
-            System.out.println("No se encontraron números amigos en este rango.");
+            System.out.println("\nPares de números amigos en el rango [" + inicio + ", " + fin + "]:");
+
+            boolean encontrado = false;
+
+            // Buscar números amigos
+            for (int a = inicio; a <= fin; a++) {
+                int b = sumaDivisores[a];
+
+                // Verificar que no se repita el par y que sean números amigos
+                if (b > a && b <= fin && sumaDivisores[b] == a) {
+                    System.out.println("(" + a + ", " + b + ")");
+                    encontrado = true;
+                }
+            }
+
+            if (!encontrado) {
+                System.out.println("No se encontraron números amigos en este rango.");
+            }
         }
 
         scanner.close();
     }
 
-    // Método para calcular la suma de los divisores propios
+    // Método para calcular la suma de los divisores propios de un número
     public static int sumaDivisoresPropios(int n) {
         if (n <= 1) return 0;
 
-        int suma = 1;
+        int suma = 1; // 1 siempre es divisor propio
         int limite = (int) Math.sqrt(n);
 
         for (int i = 2; i <= limite; i++) {
