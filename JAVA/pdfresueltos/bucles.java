@@ -7,6 +7,148 @@ public class bucles {
 	  static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el número de filas para las figuras: ");
+        int filas = scanner.nextInt();
+
+        System.out.println("\n--- a) Triángulo de asteriscos ---");
+        triangulo(filas);
+
+        System.out.println("\n--- b) Pirámide de asteriscos ---");
+        piramide(filas);
+
+        System.out.println("\n--- c) Pirámide hueca ---");
+        piramideHueca(filas);
+
+        System.out.println("\n--- d) Cuadrado hueco ---");
+        cuadradoHueco(filas);
+
+        System.out.println("\n--- e) Diamante ---");
+        diamante(filas);
+
+        System.out.println("\n--- f) Diamante hueco ---");
+        diamanteHueco(filas);
+
+        scanner.close();
+    }
+
+    // a) Triángulo de asteriscos
+    public static void triangulo(int filas) {
+        for (int i = 1; i <= filas; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    // b) Pirámide de asteriscos
+    public static void piramide(int filas) {
+        for (int i = 1; i <= filas; i++) {
+            // espacios
+            for (int j = 1; j <= filas - i; j++) {
+                System.out.print(" ");
+            }
+            // asteriscos
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    // c) Pirámide hueca
+    public static void piramideHueca(int filas) {
+        for (int i = 1; i <= filas; i++) {
+            for (int j = 1; j <= filas - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                if (i == filas || j == 1 || j == (2 * i - 1)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    // d) Cuadrado hueco
+    public static void cuadradoHueco(int filas) {
+        for (int i = 1; i <= filas; i++) {
+            for (int j = 1; j <= filas; j++) {
+                if (i == 1 || i == filas || j == 1 || j == filas) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    // e) Diamante
+    public static void diamante(int filas) {
+        // mitad superior
+        for (int i = 1; i <= filas; i++) {
+            for (int j = 1; j <= filas - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        // mitad inferior
+        for (int i = filas - 1; i >= 1; i--) {
+            for (int j = 1; j <= filas - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    // f) Diamante hueco
+    public static void diamanteHueco(int filas) {
+        // mitad superior
+        for (int i = 1; i <= filas; i++) {
+            for (int j = 1; j <= filas - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                if (j == 1 || j == (2 * i - 1)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        // mitad inferior
+        for (int i = filas - 1; i >= 1; i--) {
+            for (int j = 1; j <= filas - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                if (j == 1 || j == (2 * i - 1)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+			
+		  
+
+    public static void paresAmigos(String[] args) {
 
 
 
