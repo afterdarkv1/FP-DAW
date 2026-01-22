@@ -11,3 +11,36 @@ lista = [1, 2, 2, 3, 4, 4, 5]
 sin_duplicados = list(set(lista))
 
 print(sin_duplicados)
+# Entero (int)
+numero = 0
+
+# Flotante (float)
+decimal = 0.0
+
+# Complejo (complex)
+complejo = 0j
+
+# Booleano (bool)
+verdadero = True
+falso = False
+
+# Cadena de texto (str)
+cadena = ""
+otra_cadena = "texto"
+
+
+# Lista (list)
+lista = []
+lista2 = list()
+
+# Tupla (tuple)
+tupla = ()
+tupla2 = tuple()
+
+# Conjunto (set)
+conjunto = set()   
+
+# Diccionario (dict)
+diccionario = {}
+diccionario2 = dict()
+
