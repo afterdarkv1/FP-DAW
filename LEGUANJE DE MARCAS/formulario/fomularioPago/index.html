@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/pagoGoya" method="post" class="form">
+        <h1>Formulario Pago</h1>
+        <p class="form_alert">(los campos obligatorios se han marcado con *)</p>
+
+        <fieldset class="form_contact">
+            <legend>Información de contacto</legend>
+            <fieldset class="form_contact">
+                <legend>Información</legend>
+                <div class="form_contact_check">
+                    <div><input type="checkbox" id="acepto" required>  profesor/a</div>
+                    <div> <input type="checkbox" id="acepto" required> estudiante</div>
+                    <div><input type="checkbox" id="acepto" required> otro</div>
+                     
+                   
+                    
+                </div>
+                <div class="form_contact_data">
+                    <div>
+                        <label for="nombre"></label>Nombre*
+                    <input type="text" id="nombre" name="nombre*" required>
+                    </div>
+                    <div>
+                        <label for="correo"></label>Email*
+                    <input type="email" id="correo" name="correo*" required>
+                </div>
+                    <div>
+                        <label for="telefono"></label>Numeros de telefono*
+                    <input type="text" id="telefono" name="telefono*" required>
+                    </div>
+                    <div>
+                        <label for="contrasena"></label>Contraseña*
+                    <input type="password" id="contrasena" name="contrasena*" required>
+                    </div>
+                    
+                    
+                    
+                    
+                </div>
+                
+            </fieldset>
+           
+        </fieldset>
+
+
+
+
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+
+</html>
