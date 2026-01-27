@@ -81,17 +81,31 @@ input, .tipo_targeta{
     border-radius: 100px;
     cursor: pointer;
 }
-input[type="checkbox"] {
+.form_contact_check_div{
+    display: inline-block;
+
+}
+
+.form_politica_check input[type="checkbox"] {
+    margin-right: 10px;
+
+}
+.form_contact_check input[type="radio"] {
+ 
   appearance: none;
   -webkit-appearance: none;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border: 1px solid #666;
   border-radius: 50%;
   cursor: pointer;
 }
-input[type="checkbox"]:checked {
-  background-color: rgb(0, 110, 255);
-  border: 2px solid white;
-}
 
+
+
+
+.form_contact_check input[type="radio"]:checked {
+  background-color: rgb(0, 110, 255);
+  border: 1px solid white;       
+  box-shadow: 0 0 0 1px rgb(0,110,255); 
+}
