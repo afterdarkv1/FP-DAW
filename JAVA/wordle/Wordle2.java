@@ -3,7 +3,7 @@ package wordle;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Wordle {
+public class Wordle2 {
 	static String palabraSecreta = "";
 	static int numIntentosConsumidos = 0;
 	static Scanner scanner = new Scanner(System.in);

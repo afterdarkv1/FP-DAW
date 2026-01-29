@@ -1,5 +1,4 @@
 import random
-from operator import truediv
 
 nombres = ["Gimli", "Legolas", "Frodo", "Gandalf"]
 adjetivos = ["Barbarroja","Pies Grandes","el  Gris","PiedraDura", "el Deslumbrante "]
@@ -13,23 +12,24 @@ def nombre_caracteristica(nombres, adjetivos, clases, razas):
     index3 = random.randint(0, len(clases) - 1)
     index4 = random.randint(0, len(razas) - 1)
     return nombres[index1], adjetivos[index2], clases[index3], razas[index4]
-personaje_caracteristicas = list(nombre_caracteristica(nombres, adjetivos, clases, razas))
+personaje_caracteristicas = list(nombre_caracteristica(nombres adjetivos, clases, razas))
 
 
 def calcular_fuerza():
     fuerza = random.randint(50, 100)
     return fuerza
-def calcular_inteligencia():
-    inteligencia = 100 - calcular_fuerza()
+def calcular_inteligencia(f):
+    inteligencia = 100 - f
     return inteligencia
-def calcular_resistencia():
-    resistencia = (calcular_fuerza()*2)
+def calcular_resistencia(f):
+    resistencia = (f*2)
     return resistencia
 
 def construye_personaje(personaje_caracteristicas):
-    personaje_caracteristicas.append(calcular_fuerza())
-    personaje_caracteristicas.append(calcular_inteligencia())
-    personaje_caracteristicas.append(calcular_resistencia())
+    fuerza = calcular_fuerza()
+    personaje_caracteristicas.append(fuerza)
+    personaje_caracteristicas.append(calcular_inteligencia(fuerza))
+    personaje_caracteristicas.append(calcular_resistencia(fuerza))
     return personaje_caracteristicas
 
 
