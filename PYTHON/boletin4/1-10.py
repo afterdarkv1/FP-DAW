@@ -35,18 +35,24 @@ print("Sucesión:", ",".join(str(x) for x in fib[:n]))
 # EJERCICIO 3 — FIBONACCI HASTA UN LÍMITE
 # ===============================================================
 
-print("\nEJERCICIO 3 - FIBONACCI HASTA UN LÍMITE")
+n = int(input("Introduce un número: "))
 
-limite = int(input("Introduce un número límite: "))
+if n < 0:
+    print("Introduce un número mayor o igual a 0")
 
-a, b = 0, 1
-resultado = [0]
+elif n == 0:
+    print([0])
 
-while b <= limite:
-    resultado.append(b)
-    a, b = b, a + b
+elif n == 1:
+    print([0, 1])
 
-print("Resultado:", ",".join(str(x) for x in resultado))
+else:
+    fibonacci = [0, 1]
+
+    while fibonacci[-1] + fibonacci[-2] <= n:
+        fibonacci.append(fibonacci[-1] + fibonacci[-2])
+
+    print(fibonacci)
 
 
 
