@@ -27,10 +27,9 @@
                 </div>
             </fieldset>
             <div class="form_contact_data">
-                <div>
-                    <label for="nombre"></label>Nombre <p class="form_alert_asterisk">*</p>
-                    <input type="text" id="nombre" name="nombre*" required>
-                </div>
+                   <fieldset class="form_contact">
+            
+            
                 <div>
                     <label for="correo"></label>Correo <p class="form_alert_asterisk">*</p>
                     <input type="email" id="correo" name="correo*" required>
@@ -57,8 +56,9 @@
         </fieldset>
         <fieldset class="form_payment">
             <legend style="font-weight: bold;">Información de pago</legend>
-
-            <div class="form_payment_data">
+               <fieldset class="form_contact">
+                   <div class="form_payment_data">
+                
                 <div>
                     <label for="targeta"></label>Tipo de targeta
                     <select class="tipo_targeta">
@@ -90,6 +90,54 @@
                     </select>
                 </div>
 
+               </fieldset>
+            
+
+         
+
+
+
+            </div>
+
+
+        </fieldset>
+           <fieldset class="form_payment">
+            <legend style="font-weight: bold;">Añadir nueva direccion</legend>
+            <fieldset class="form_contact">
+                     <div class="form_payment_data">
+                <div>
+                    <label for="targeta"></label>Tipo de via
+                    <select class="tipo_targeta">
+                        <option>Calle</option>
+                        <option>Avenida</option>
+                        <option>Via</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="tarjeta"></label>Número de tarjeta <p class="form_alert_asterisk"></p> 
+                    <input type="text" id="tarjeta" name="tarjeta*" placeholder="calle de la hacienda de pavones" required style="width: 100%; height: 10vh;">
+                </div>
+         
+                <div>
+                    <label for="contrasena"></label>poblacion
+                    <select><option>Elige la poblacion</option>
+                        <option value="madrid">Madrid</option>
+                        <option value="valencia">Valencia</option>
+                        <option value="burgos">burgos</option>
+                        <option value="moratalaz">Moratalaz</option>
+                        <option value="rosas">Las Rosas</option>
+
+
+                    </select>
+                </div>
+                   <div>
+                    <label for="tarjeta"></label>codigo Postal <p class="form_alert_asterisk"></p> :
+                    <input type="text" id="codigo_postal" name="codigo_postal*" required>
+                </div>
+ 
+            </fieldset>
+
+       
 
 
 

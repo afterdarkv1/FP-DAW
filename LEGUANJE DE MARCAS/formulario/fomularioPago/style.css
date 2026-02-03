@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: monospace;
 }
 .form{
     width: 700px;
@@ -10,8 +10,12 @@
     padding: 20px;
     border: 1px solid #000000;
     border-radius: 8px;
+    justify-content: center;
 
 
+}
+.form div {
+    width:23vw;
 }
 .form_alert{
     color: #ff0000;
@@ -22,12 +26,29 @@
 .form_alert_asterisk{
     color: #ff0000;
 }
-.form_contact, .form_payment, .form_check{
+.form_contact, .form_payment{
+    display: grid;
     border: 1px solid #000000;
     background-color: #ffffff;
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 10px;
+    justify-content: center;
+
+}
+.form_contact_data{
+    width: 100%;
+}
+.form_check {
+    display: grid;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+.form_contact input, .form_payment input{
+width: 100%;
 }
 .form_contact legend{
     padding: 0 10px;
@@ -49,6 +70,10 @@
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.orange_button:hover{
+    background-color: #ffca7b;
 }
 .white_button{
     background-color: #ffffff;
@@ -59,6 +84,10 @@
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
+    transition: border 0.3s ease;
+}
+.white_button:hover{
+   border: 1px solid black;
 }
 
 .form_contact_data div, .form_payment_data div{
@@ -109,3 +138,4 @@ input, .tipo_targeta{
   border: 1px solid white;       
   box-shadow: 0 0 0 1px rgb(0,110,255); 
 }
+
