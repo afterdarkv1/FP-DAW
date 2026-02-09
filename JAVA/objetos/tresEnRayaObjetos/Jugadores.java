@@ -11,11 +11,15 @@ public class Jugadores {
         jugador2 = "Jugador 2";
         tablero = new Tablero();
     }
-
+    
+    public String dameJugador1() {
+    	return jugador1;
+    }
+    public String dameJugador2() {
+    	return jugador2;
+    }
     public void mueveJugador1(int pos) {
-        if (pos < 1 || pos > 9) {
-            System.out.println("Rango incorrecto");
-        }if (tablero.marcarCasilla(pos, 1)) {
+if (tablero.marcarCasilla(pos, 1)) {
             tablero.dibujarTablero();
         }
         if (tablero.ganaJugador1()) {
@@ -26,9 +30,8 @@ public class Jugadores {
     }
 
     public void mueveJugador2(int pos) {
-        if (pos < 1 || pos > 9) {
-            System.out.println("Rango incorrecto");
-        } if (tablero.marcarCasilla(pos, 2)) {
+     
+       if (tablero.marcarCasilla(pos, 2)) {
             tablero.dibujarTablero();
         }
         if (tablero.ganaJugador2()) {
