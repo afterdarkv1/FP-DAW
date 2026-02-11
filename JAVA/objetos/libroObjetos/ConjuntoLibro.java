@@ -62,7 +62,7 @@ public class ConjuntoLibro {
 		}
 
 	}
-	public Libro peorLibro() {
+	public void peorLibro() {
 		double menor = 10;
 		Libro peorLibro = null;
 
@@ -70,11 +70,10 @@ public class ConjuntoLibro {
 			if(libros[i] != null && libros[i].dameCalificacion() < menor) {
 				menor = libros[i].dameCalificacion();
 				peorLibro = libros[i];
-
+				System.out.println(peorLibro);
 			}
 			
 		}
-		return peorLibro;
 
 	}
 	public String toString() {
