@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio 6 - Adivina el Número</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="contenedor">
 
     <div class="titulo">
         ADIVINA EL NÚMERO
     </div>
 
-    <div class="fila">
-       <tr>
-        <div class="numero"><td ><strong>Número:</strong></td></div>
-    
-    <td >
-        <input type="number" id="numeroUsuario" min="1" max="100">
-    </td>
-    <td>
-        <button onclick="jugar()">Jugar</button>
-    </td>
-    <td id="mensaje"></td>
-</tr>
-    </div>
+    <!-- Fila Número + Botón + Mensaje -->
+    <table class="fila">
+        <tr>
+            <td><strong>Número:</strong></td>
+            <td>
+                <input type="number" id="numeroUsuario" min="1" max="100">
+            </td>
+            <td>
+                <button onclick="jugar()">Jugar</button>
+            </td>
+            <td id="mensaje"></td>
+        </tr>
+    </table>
 
+    <!-- Intentos realizados -->
     <div class="intentosTexto">
-        INTENTOS REALIZADOS: <span id="listaIntentos"></span>
+        INTENTOS REALIZADOS: 
+        <span id="listaIntentos"></span>
     </div>
 
+    <!-- Tabla de intentos -->
     <table class="tabla">
         <tr>
             <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
@@ -43,7 +46,8 @@
     </table>
 
 </div>
-</body>
+
 <script src="script.js"></script>
 
+</body>
 </html>
