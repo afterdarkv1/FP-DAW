@@ -40,7 +40,7 @@ public class Persona {
 
 	@Override
 	public String toString() {
-		return super.toString() + "Persona [nombre=" + nombre + ", apellido=" + apellido + ", estadoCivil=" + estadoCivil + "]";
+		return super.toString() + "[nombre=" + nombre + ", apellido=" + apellido + ", estadoCivil=" + estadoCivil + "]";
 	}
 	
 	
