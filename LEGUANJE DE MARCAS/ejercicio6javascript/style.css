@@ -1,0 +1,88 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor{
+    width: 900px;
+    margin: auto;
+    border: 2px solid black;
+}
+
+/* Barra superior */
+.titulo{
+    background-color: #b57edc;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 5px;
+}
+
+/* Fila numero + jugar + mensaje */
+.fila{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.fila div{
+    border-right: 2px solid black;
+    padding: 8px;
+    font-size: 20px;
+}
+
+.fila div:last-child{
+    border-right: none;
+}
+
+input{
+    font-size: 20px;
+    width: 80px;
+}
+
+button{
+    font-size: 20px;
+    width: 100%;
+}
+
+/* Intentos realizados */
+.intentosTexto{
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    padding: 5px;
+    font-size: 20px;
+}
+
+/* Tabla intentos */
+.tabla{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla td{
+    border: 2px solid black;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.usado{
+    background-color: #b57edc;
+}
+
+.mayor{
+    background-color: #f05c5c;
+    font-weight: bold;
+}
+
+.menor{
+    background-color: #f05c5c;
+    font-weight: bold;
+}
+
+.acierto{
+    background-color: #5fd35f;
+    font-weight: bold;
+}

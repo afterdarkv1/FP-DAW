@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="contenedor">
+
+    <div class="titulo">
+        ADIVINA EL NÚMERO
+    </div>
+
+    <div class="fila">
+        <div>
+            Número: 
+            <input type="number" id="numeroUsuario" min="1" max="100">
+        </div>
+
+        <div>
+            <button onclick="jugar()">Jugar</button>
+        </div>
+
+        <div id="mensaje"></div>
+    </div>
+
+    <div class="intentosTexto">
+        INTENTOS REALIZADOS: <span id="listaIntentos"></span>
+    </div>
+
+    <table class="tabla">
+        <tr>
+            <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+            <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+        </tr>
+        <tr id="filaX">
+            <td>X</td><td>X</td><td>X</td><td>X</td><td>X</td>
+            <td>X</td><td>X</td><td>X</td><td>X</td><td>X</td>
+        </tr>
+    </table>
+
+</div>
+</body>
+<script src="script.js"></script>
+
+</html>
