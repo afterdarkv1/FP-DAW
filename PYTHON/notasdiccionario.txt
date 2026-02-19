@@ -1,0 +1,28 @@
+claves = list(liga.keys())
+valores = list(liga.values())
+liga{"equipo3"} = 77
+liga{"equipo2"} = 22
+liga.clear()
+liga.pop("equipo2")
+
+sumarle a a el diccionario b
+a = {"x": 1, "y": 2}
+b = {"y": 99, "z": 3}
+
+a.update(b)
+
+print(a)
+# {'x': 1, 'y': 99, 'z': 3}
+
+
+ 
+ conservar los datos y crear uno nuevo
+a = {"x": 1, "y": 2}
+b = {"y": 99, "z": 3}
+
+c = a | b
+
+print(c)
+# {'x': 1, 'y': 99, 'z': 3}
+
+

@@ -13,3 +13,6 @@ for palabra in listaPalabras:
         if letra.lower() in "aeiou":
             contadorVocales += 1
     print(f"La palabra '{palabra}' tiene {contadorVocales} vocales")
+
+
+
