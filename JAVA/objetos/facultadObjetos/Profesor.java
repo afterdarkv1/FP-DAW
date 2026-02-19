@@ -2,9 +2,13 @@ package facultadObjetos;
 
 public class Profesor extends EmpleadosFacultad {
 	String departamento;
+	public Profesor(String nombre, String apellido, String dni, String estadoCivil, String añoIncorporacion, int numeroDespacho, String departamento) {
+		super(nombre, apellido,dni, estadoCivil, añoIncorporacion, numeroDespacho);
+		this.departamento = departamento;
+	}
 	public Profesor(String nombre, String apellido, String dni, String estadoCivil, String añoIncorporacion, int numeroDespacho) {
 		super(nombre, apellido,dni, estadoCivil, añoIncorporacion, numeroDespacho);
-		this.departamento = "departamento 2";
+		this.departamento = "2";
 	}
 	public String getDepartamento() {
 		return departamento;
@@ -14,9 +18,8 @@ public class Profesor extends EmpleadosFacultad {
 	}
 	@Override
 	public String toString() {
-		return super.toString() + "Profesor [departamento=" + departamento + "]";
+		return super.toString() + "[departamento=" + departamento + "]";
 	}
-
 
 	
 	

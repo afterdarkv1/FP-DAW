@@ -6,6 +6,10 @@ public class PersonalServicio extends EmpleadosFacultad{
 		super(nombre, apellido,dni, estadoCivil, añoIncorporacion, numeroDespacho);
 		this.seccion = "a";
 	}
+	public PersonalServicio(String nombre, String apellido,String dni,  String estadoCivil, String añoIncorporacion, int numeroDespacho, String seccion) {
+		super(nombre, apellido,dni, estadoCivil, añoIncorporacion, numeroDespacho);
+		this.seccion = seccion;
+	}
 	public String getSeccion() {
 		return seccion;
 	}
@@ -14,7 +18,7 @@ public class PersonalServicio extends EmpleadosFacultad{
 	}
 	@Override
 	public String toString() {
-		return super.toString() + "PersonalServicio [seccion=" + seccion + "]";
+		return super.toString() + "[seccion=" + seccion + "]";
 	}
 
 
