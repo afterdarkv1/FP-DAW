@@ -1,3 +1,12 @@
+diccionaraio
+keywordvalues
+print diccionario
+get
+recorrer diccionario
+
+for clave, valor in liga.items():
+    print(clave,"puntos.", valor)
+    
 claves = list(liga.keys())
 valores = list(liga.values())
 liga{"equipo3"} = 77
