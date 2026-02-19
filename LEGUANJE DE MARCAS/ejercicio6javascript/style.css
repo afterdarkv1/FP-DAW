@@ -86,3 +86,18 @@ button{
     background-color: #5fd35f;
     font-weight: bold;
 }
+/* Quitar flechas en Chrome */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Quitar flechas en Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.numero{
+    width: 100px;
+}
