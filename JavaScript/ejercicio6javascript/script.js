@@ -38,7 +38,6 @@ function jugar(){
 
     // Marcar X
     let fila = document.getElementById("filaX").children;
-    fila[intentos-1].textContent = "X";
     fila[intentos-1].classList.add("usado");
 
     if(intentos === maxIntentos && numero !== numeroSecreto){
