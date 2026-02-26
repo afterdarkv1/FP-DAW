@@ -1,16 +1,29 @@
+package empleadosAbstraccion;
+
 public abstract class Empleado {
 
     private String nombre;
     private String apellido;
     private String numeroSeguridadSocial;
+    double salarioBase;
 
     public Empleado(String nombre, String apellido, String numeroSeguridadSocial) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.numeroSeguridadSocial = numeroSeguridadSocial;
+        
+        
     }
+   /* public Empleado(String nombre, String apellido, String numeroSeguridadSocial, double salarioBase) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.numeroSeguridadSocial = numeroSeguridadSocial;
+        this.salarioBase = salarioBase;
+        
+        
+    }
+*/
 
-    // Método abstracto (obliga a las clases hijas a implementarlo)
     public abstract double calcularSalario();
 
     public String getNombre() {
