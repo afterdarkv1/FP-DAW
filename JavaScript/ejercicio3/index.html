@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 - Captura de Controles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenedor">
+    <h2>VALOR EN CONTROLES</h2>
+
+    <div class="campo">
+        <label>Caja texto:</label>
+        <input type="text" id="texto" value="Gerardo">
+    </div>
+
+    <div class="campo">
+        <label>Caja número:</label>
+        <input type="number" id="numero" value="45">
+    </div>
+
+    <div class="campo">
+        <label>Caja password:</label>
+        <input type="password" id="password" value="Contraseña">
+    </div>
+
+    <div class="campo">
+        <label>Caja fecha:</label>
+        <input type="date" id="fecha" value="2023-01-31">
+    </div>
+
+    <div class="campo">
+        <label>Caja hora:</label>
+        <input type="time" id="hora" value="19:58">
+    </div>
+
+    <div class="campo">
+        <label>Caja radio:</label>
+        <input type="radio" name="radio" value="true"> 
+    </div>
+
+    <div class="campo">
+        <label>Caja check:</label>
+        <input type="checkbox" id="check">
+    </div>
+
+    <div class="campo">
+        <label>Caja select:</label>
+        <select id="select">
+            <option>Opción 1</option>
+            <option>Opción 2</option>
+            <option selected>Opción 3</option>
+        </select>
+    </div>
+
+    <button id="btnCapturar">Capturar valores</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
