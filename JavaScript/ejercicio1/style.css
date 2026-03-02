@@ -1,0 +1,20 @@
+body {
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+.div {
+    background-color: lightblue;
+    padding: 10px;
+    border: 5px solid rgb(0, 0, 0);
+}
+.div_input, .div_input_color, .div_input_button, .div{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+}
