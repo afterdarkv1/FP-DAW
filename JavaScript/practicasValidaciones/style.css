@@ -1,0 +1,15 @@
+#texto, #numero {
+    border: 2px solid rgb(0, 0, 0);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+#texto:invalid, #numero:invalid {
+    border: 2px solid rgb(255, 0, 0);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+#texto:valid, #numero:valid {
+    border: 2px solid rgb(0, 255, 98);
+    padding: 5px;
+    margin-bottom: 10px;
+}
