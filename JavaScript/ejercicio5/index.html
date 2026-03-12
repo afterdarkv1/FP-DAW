@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 5</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    text-align:center;
+}
+
+.menu{
+    width:400px;
+    margin:auto;
+    border:2px solid black;
+    padding:20px;
+}
+
+.opcion{
+    padding:10px;
+    font-weight:bold;
+}
+
+.seleccionado{
+    background:red;
+    color:black;
+}
+
+#resultado{
+    margin-top:20px;
+    height:30px;
+    width:300px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>MENU SELECCIONABLE</h2>
+
+<div class="menu">
+
+<div id="op0" class="opcion seleccionado">¿EL NÚMERO ES PAR?</div>
+<div id="op1" class="opcion">¿EL NÚMERO ES IMPAR?</div>
+<div id="op2" class="opcion">¿EL NÚMERO ES PRIMO?</div>
+<div id="op3" class="opcion">OBTENER DIVISORES</div>
+
+<br>
+
+<button onclick="arriba()">↑</button>
+<button onclick="abajo()">↓</button>
+
+<input type="number" id="numero" min="1" max="100">
+
+<button onclick="calcular()">CALCULAR</button>
+
+<br><br>
+
+<input type="text" id="resultado" readonly>
+
+</div>
+
+<script>
+
+let seleccion = 0
+const opciones = 4
+
+function actualizarMenu(){
+
+    for(let i=0;i<opciones;i++){
+        document.getElementById("op"+i).classList.remove("seleccionado")
+    }
+
+    document.getElementById("op"+seleccion).classList.add("seleccionado")
+}
+
+function arriba(){
+
+    if(seleccion>0){
+        seleccion--
+    }
+
+    actualizarMenu()
+}
+
+function abajo(){
+
+    if(seleccion<opciones-1){
+        seleccion++
+    }
+
+    actualizarMenu()
+}
+
+function calcular(){
+
+    let num = parseInt(document.getElementById("numero").value)
+
+    if(num<=0 || isNaN(num)){
+        alert("El número debe ser mayor que 0")
+        return
+    }
+
+    let resultado=""
+
+    switch(seleccion){
+
+        case 0:
+            resultado = (num%2==0) ? "El número es PAR" : "No es PAR"
+        break
+
+        case 1:
+            resultado = (num%2!=0) ? "El número es IMPAR" : "No es IMPAR"
+        break
+
+        case 2:
+
+            let primo=true
+
+            for(let i=2;i<num;i++){
+                if(num%i==0){
+                    primo=false
+                    break
+                }
+            }
+
+            resultado = primo ? "Es PRIMO" : "No es PRIMO"
+        break
+
+        case 3:
+
+            let divisores="Divisores: "
+
+            for(let i=1;i<=num;i++){
+                if(num%i==0){
+                    divisores+= i + " "
+                }
+            }
+
+            resultado = divisores
+
+        break
+    }
+
+    document.getElementById("resultado").value = resultado
+}
+
+</script>
+
+</body>
+</html>
