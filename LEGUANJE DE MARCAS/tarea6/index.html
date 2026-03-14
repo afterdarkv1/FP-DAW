@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6 - Adivina el Número</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+    <div class="titulo">
+        ADIVINA EL NÚMERO
+    </div>
+
+    <!-- Fila Número + Botón + Mensaje -->
+    <table class="fila">
+        <tr>
+            <td><strong>Número:</strong></td>
+            <td>
+                <input type="number" id="numeroUsuario" min="1" max="100">
+            </td>
+            <td>
+                <button id="botonJugar">Jugar</button>
+            </td>
+            <td id="mensaje"></td>
+        </tr>
+    </table>
+
+    <!-- Intentos realizados -->
+    <div class="intentosTexto">
+        INTENTOS REALIZADOS: 
+        <span id="listaIntentos"></span>
+    </div>
+
+    <!-- Tabla de intentos -->
+    <table class="tabla">
+        <tr>
+            <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+            <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+        </tr>
+        <tr id="filaX">
+            <td>X</td><td>X</td><td>X</td><td>X</td><td>X</td>
+            <td>X</td><td>X</td><td>X</td><td>X</td><td>X</td>
+        </tr>
+    </table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

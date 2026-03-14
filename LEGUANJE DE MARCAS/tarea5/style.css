@@ -1,0 +1,58 @@
+body{
+font-family: Arial;
+background:#ddd;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:white;
+padding:30px;
+border:2px solid black;
+width:400px;
+text-align:center;
+}
+
+.titulo{
+border:2px solid black;
+padding:5px;
+}
+
+ul{
+list-style:none;
+padding:0;
+margin:20px 0;
+}
+
+li{
+padding:10px;
+font-weight:bold;
+}
+
+.active{
+background:red;
+color:black;
+}
+
+.controls{
+margin:20px 0;
+}
+
+button{
+padding:10px;
+margin:5px;
+cursor:pointer;
+}
+
+#numero{
+width:100px;
+padding:5px;
+}
+
+#resultado{
+width:100%;
+padding:10px;
+margin-top:10px;
+}
