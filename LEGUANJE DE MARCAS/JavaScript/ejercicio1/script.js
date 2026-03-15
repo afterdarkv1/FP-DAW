@@ -9,15 +9,17 @@ let boton_fondo = document.getElementById("cambiar_fondo")
 let boton_borde = document.getElementById("cambiar_borde")
 let boton_texto = document.getElementById("cambiar_color_texto")
 
-boton.addEventListener("click", ()=>{
-    p.textContent = input.value
-})
-boton_fondo.addEventListener("click", ()=>{
-    div.style.backgroundColor = color_fondo.value
-})
-boton_borde.addEventListener("click", ()=>{
-    div.style.borderColor = color_borde.value
-})
-boton_texto.addEventListener("click", ()=>{
-    p.style.color = color_texto.value
-})
+boton.addEventListener("click", () => {
+   p.textContent = input.value;
+
+});
+boton_fondo.addEventListener("click", () => {
+    div.style.backgroundColor = color_fondo.value;
+});
+boton_borde.addEventListener("click", () => {
+    div.style.borderColor = color_borde.value;
+});
+boton_texto.addEventListener("click", () => {
+    p.style.color = color_texto.value;
+});
+

@@ -1,0 +1,19 @@
+<form id="formulario">
+  <input type="text" id="nombre">
+  <button type="submit">Enviar</button>
+</form>
+
+<script>
+document.getElementById("formulario").addEventListener("submit", function(event) {
+  
+  event.preventDefault(); // evita que el formulario se envíe
+
+  let nombre = document.getElementById("nombre").value;
+
+  if(nombre === "") {
+    alert("El nombre es obligatorio");
+  } else {
+    alert("Formulario válido");
+  }
+});
+</script>
