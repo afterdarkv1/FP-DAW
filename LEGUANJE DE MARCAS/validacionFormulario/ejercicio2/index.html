@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Solicitud de información</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h2>Solicitud de información</h2>
+
+<form onsubmit="return validar()">
+
+<label>Nombre</label>
+<input type="text" id="nombre">
+
+<label>Email</label>
+<input type="email" id="email">
+
+<label>Asunto</label>
+
+<select id="asunto" onchange="mostrarSolicitud()">
+
+<option value="">Selecciona</option>
+<option>Pedir información</option>
+<option>Estado de una solicitud</option>
+<option>Otros</option>
+
+</select>
+
+<div id="solicitudBox">
+
+<label>Nº Solicitud:</label>
+
+<input type="text" id="numSolicitud" placeholder="Escribe el número de solicitud">
+
+</div>
+
+<label>Escribe un mensaje</label>
+
+<textarea id="mensaje"></textarea>
+
+<button>Enviar</button>
+
+</form>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
