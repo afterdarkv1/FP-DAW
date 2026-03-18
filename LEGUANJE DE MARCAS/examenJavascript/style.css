@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    
+background-color: bisque;
+padding: 5px;
+}
+
+#error{
+    display: none;
+    color: brown;
+}
+

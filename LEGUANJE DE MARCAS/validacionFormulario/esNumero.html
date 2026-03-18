@@ -1,0 +1,27 @@
+<form onsubmit="return validarEdad()">
+
+Edad:
+<input type="text" id="edad">
+
+<button type="submit">Enviar</button>
+
+</form>
+
+<script>
+function validarEdad(){
+
+let edad = document.getElementById("edad").value;
+
+if(isNaN(edad)){
+    alert("Debe introducir un número");
+    return false;
+}
+
+if(edad < 18){
+    alert("Debe ser mayor de edad");
+    return false;
+}
+
+return true;
+}
+</script>

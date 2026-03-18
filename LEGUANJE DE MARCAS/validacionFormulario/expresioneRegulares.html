@@ -1,0 +1,23 @@
+<form onsubmit="return validarEmail()">
+
+Email:
+<input type="text" id="email">
+
+<button type="submit">Enviar</button>
+
+</form>
+
+<script>
+function validarEmail(){
+
+let email = document.getElementById("email").value;
+let expresion = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(!expresion.test(email)){
+    alert("Email no válido");
+    return false;
+}
+
+return true;
+}
+</script>

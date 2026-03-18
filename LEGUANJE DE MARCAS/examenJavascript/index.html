@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form  onsubmit="return validar()" id="formulario">
+        <div>   
+         <label for="descripcion">descripcion
+            <input id="descripcion" type="text">
+        </label>
+        </div>
+         <div>   
+         <label for="cantidad">catidad
+            <input id="cantidad" type="number">
+        </label>
+        </div>
+       <select id="opciones">
+
+            <option value="opciones">Selecciona</option>
+            <option>comida</option>
+            <option>transporte</option>
+            <option>ocio</option>
+            <option>otros</option>
+        </select>
+      
+       <button id="button" type="submit">Añadir</button>
+        <span id="error">error al introducir los datos, reviselo denuevo</span>
+         <table class="fila">
+        <tr>
+            <td><strong>lista:</strong></td>
+        
+              <td id="total"></td>
+            <td id="mensaje"></td>
+        </tr>
+    </table>
+    </form>
+    
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,31 @@
+<form onsubmit="return validarGenero()">
+
+<input type="radio" name="genero" value="hombre"> Hombre
+<input type="radio" name="genero" value="mujer"> Mujer
+<input type="radio" name="genero" value="otro"> Otro
+
+<br><br>
+<button type="submit">Enviar</button>
+
+</form>
+
+<script>
+function validarGenero(){
+
+let generos = document.getElementsByName("genero");
+let seleccionado = false;
+
+for(let i=0; i<generos.length; i++){
+    if(generos[i].checked){
+        seleccionado = true;
+    }
+}
+
+if(!seleccionado){
+    alert("Debe seleccionar un género");
+    return false;
+}
+
+return true;
+}
+</script>
