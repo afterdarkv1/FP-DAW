@@ -18,3 +18,5 @@ boton1.addEventListener("click", () => {
 boton2.addEventListener("click", () => {
     input2.value = "";
 })
+
+

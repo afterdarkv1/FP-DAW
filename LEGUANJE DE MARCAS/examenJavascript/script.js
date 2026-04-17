@@ -2,46 +2,46 @@ lista = []
 let total = 0
 let mensaje = document.getElementById("mensaje")
 let cantidadTotal = document.getElementById("total")
-document.getElementById("formulario").addEventListener("submit", function(event) {
-  
+let formulario = document.getElementById("formulario")
+formulario.addEventListener("submit", function(event) {
+event.preventDefault(); 
 let descripcion = document.getElementById("descripcion").value;
-let cantidad = document.getElementById("cantidad").value;
+let cantidad = parseFloat(document.getElementById("cantidad").value);
 let opciones = document.getElementById("opciones").value;
 let error = document.getElementById("error");
 
 error.style.display = "none";
     
-if(descripcion=="" || cantidad=="" || opciones==""){
+if(descripcion=="" || isNaN(cantidad) || opciones==""){
 error.style.display="block";
-event.preventDefault(); 
-return false;
+return;
 }
 
 
 
 if(cantidad <= 0){
 error.style.display="block";
-event.preventDefault(); 
-return false;
+return;
 }
-else {
+
     alert("formulario enviado correctamente")
-    lista.push(cantidad)
-    lista.push(descripcion)
-    lista.push(opciones)
+    lista.push({ 
+        cantidad: cantidad,
+        descripcion: descripcion,
+        opciones: opciones
+    });
+    mensaje.innerHTML= "";
+    total += cantidad;
+    formulario.reset();
 
-    total += cantidad
-  
 
-    return true;
-}
+
+    lista.forEach(element => {
+    mensaje.innerHTML += `<li>${element.cantidad} ${element.descripcion} ${element.opciones}</li>`;
+   
 });
-
-lista.forEach(element => {
-    mensaje.textContent = element + " ";
+ cantidadTotal.textContent = "Total: " + total;
 });
-
-mensaje.textContent = total;
 
 
 
